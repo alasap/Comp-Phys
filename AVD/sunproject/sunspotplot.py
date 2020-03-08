@@ -2,7 +2,7 @@ import numpy as np
 import itertools
 import matplotlib.pyplot as plt
 
-f = open('/home/austin/Desktop/SSmeans.txt')
+f = open('/home/austin/docs/cp/AVD/sunproject/SSmeans.txt')
 array=f.read().split()
 array=array[20:-1]
 len=len(array)
