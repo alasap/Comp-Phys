@@ -1,12 +1,11 @@
 import numpy as np
 import itertools
 import matplotlib.pyplot as plt
+from PyAstronomy import pyasl
 
 f = open('/home/austin/docs/cp/AVD/sunproject/SSmeans.txt')
 array=f.read().split()
 array=array[20:-1]
-len=len(array)
-print(len)
 array=np.array(array)
 
 array=array.astype(float)
@@ -18,7 +17,12 @@ arrayflat=list(itertools.chain(*array))
 #Converting the list back into an array
 array=np.array(arrayflat)
 
-print(array)
+yflat=pyasl.smooth(array,11,'flat')
+yhamming=pyasl.smooth(array,11,'hamming')
+
 x=np.arange(0,612,1)
-plt.plot(x,array)
+plt.plot(x,array,color='gray',alpha=0.3)
+plt.plot(x,yflat,color='red',alpha=0.4)
+plt.plot(x,yhamming,color='blue',alpha=0.4)
+
 plt.show()
