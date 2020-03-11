@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 import itertools
 from PyAstronomy import pyasl
 #Opening the files and Converting the contents to an arrays
-cosmicray = open('/home/austin/docs/cp/AVD/sunproject/climax.tab')
-sunspot = open('/home/austin/docs/cp/AVD/sunproject/SSmeans.txt')
+cosmicray = open('/home/austin/docs/cp/sunproject/climax.tab')
+sunspot = open('/home/austin/docs/cp/sunproject/SSmeans.txt')
 
 
 CA=cosmicray.read().split()
