@@ -35,7 +35,7 @@ SS=list(itertools.chain(*SS))
 CA=np.array(CA)
 SS=np.array(SS)
 #Beginning to plot
-x=np.arange(0,612,1)
+x=np.arange(1,613,1)
 CAn=CA
 SSn=SS
 #Using the PyAstronomy package to creating moving averages
@@ -59,14 +59,18 @@ axs2.plot(x, SSh,color='blue',alpha=0.4)
 fig.canvas.draw()
 labels = [item.get_text() for item in axs2.get_xticklabels()]
 labels[1] = '1953'
-labels[2]='1966'
-labels[3]='1991'
-labels[4]='2003'
-labels[5]='1993'
-labels[6]='2003'
-labels=labels[0:-1]
-axs2.xaxis.set_major_locator(plt.MaxNLocator(11))
-print(labels)
+labels[2]='1960'
+labels[3]='1966'
+labels[4]='1972'
+labels[5]='1978'
+labels[6]='1985'
+labels[7]='1991'
+labels[8]='1997'
+#labels[9]='2002'
+labels=labels
+axs2.xaxis.set_major_locator(plt.MaxNLocator(10))
+#print(labels)
+axs2.set_xlim([-5,615])
 axs2.set_xticklabels(labels)
 
 plt.show()
