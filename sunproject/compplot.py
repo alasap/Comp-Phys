@@ -1,7 +1,13 @@
+#Created by Austin Hall
+#March 2020
+#Computational Physics Sun-Project Plot
 import numpy as np
 import matplotlib.pyplot as plt
 import itertools
 from PyAstronomy import pyasl
+import seaborn as sns
+sns.set()
+
 #Opening the files and Converting the contents to an arrays
 cosmicray = open('/home/austin/docs/cp/sunproject/climax.tab')
 sunspot = open('/home/austin/docs/cp/sunproject/SSmeans.txt')
@@ -34,12 +40,14 @@ SS=list(itertools.chain(*SS))
 #Converting the list back into an array
 CA=np.array(CA)
 SS=np.array(SS)
+#Multiplying the Cosmic Ray data to determine the hourly counting rate
+CA=CA*100
 #Beginning to plot
 x=np.arange(1,613,1)
 CAn=CA
 SSn=SS
 #Using the PyAstronomy package to creating moving averages
-#to smoooth the data
+#and smooth the data
 CAf=pyasl.smooth(CA,11,'flat')
 CAh=pyasl.smooth(CA,11,'hamming')
 SSf=pyasl.smooth(SS,11,'flat')
@@ -48,29 +56,24 @@ SSh=pyasl.smooth(SS,11,'hamming')
 
 
 fig, (axs1,axs2) = plt.subplots(2,1,sharex=True)
-axs1.set_title('Monthly Cosmic Ray Activity')
-axs2.set_title('Monthly mean Sun-Spots')
-axs1.plot(x, CAn,color='grey',alpha=0.3)
-axs1.plot(x,CAf,color='red',alpha=0.4)
-axs1.plot(x,CAh,color='blue',alpha=0.4)
+axs1.set_title('Cosmic Ray Activity',fontsize=20)
+axs2.set_title('Sun-Spot Count',fontsize=20)
+axs1.plot(x, CAn,color='grey',alpha=0.3,label='Given Data')
+axs1.plot(x,CAf,color='red',alpha=0.4,label='Flat Smoothing')
+axs1.plot(x,CAh,color='blue',alpha=0.4,label='Hamming Smoothing')
 axs2.plot(x, SSn,color='grey',alpha=0.3)
 axs2.plot(x, SSf,color='red',alpha=0.4)
 axs2.plot(x, SSh,color='blue',alpha=0.4)
-fig.canvas.draw()
-labels = [item.get_text() for item in axs2.get_xticklabels()]
-labels[1] = '1953'
-labels[2]='1960'
-labels[3]='1966'
-labels[4]='1972'
-labels[5]='1978'
-labels[6]='1985'
-labels[7]='1991'
-labels[8]='1997'
+labels=['1953','1963','1973','1983','1993','2003']
 #labels[9]='2002'
-labels=labels
-axs2.xaxis.set_major_locator(plt.MaxNLocator(10))
-#print(labels)
-axs2.set_xlim([-5,615])
+ticks=np.arange(1,613,122)
+axs2.set_xticks(ticks)
 axs2.set_xticklabels(labels)
+#print(labels)
+axs2.set_xlim([-5,620])
+axs2.set_xlabel('Years',fontsize=15)
+axs2.set_ylabel('$R_z = k(10g + s)$')
+axs1.set_ylabel('Counts per Hour')
+axs1.legend(fontsize=8,loc='lower left')
 
 plt.show()

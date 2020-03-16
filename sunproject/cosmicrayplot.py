@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import itertools
 from PyAstronomy import pyasl
 #Opening the file and Converting the contents to an array
-f = open('/home/austin/docs/cp/AVD/sunproject/climax.tab')
+f = open('/home/austin/docs/cp/sunproject/climax.tab')
 array=f.read().split()
 array=array[20:-80]
 
