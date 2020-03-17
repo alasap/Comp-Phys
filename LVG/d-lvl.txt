@@ -1,0 +1,11 @@
+D1: How to install git on 'linux'
+in a terminal window enter 
+"sudo apt install git"
+
+D2: How to ask git for help
+"git --help"
+
+D3: Configure Git to remember my username ,email , and prefered editor
+'git config --global user.name "usr"'
+'git config --global user.email "usr@email.com"'
+'git config --global core.editor "nano"'
