@@ -1,0 +1,17 @@
+B1: Viewing the difference between a current and staged version of a file
+'git diff --cached'
+
+B2: Unstaging a file in my local repository
+git reset filename.txt
+
+B3: I can reset to previos version of my local repository
+git reset [<mode>] [<commit>]
+'git reset commit#'
+*where commit is the commit number associated with the desired commit*
+
+B4: Reverting to a previous version
+'git revert commit#'
+
+B5: Merging a branch 'newbranch' back into the master branch
+once in master branch input
+'git merge newbranch'
