@@ -1,0 +1,26 @@
+C1: How to create a local git repository
+naviagte to the desired directory and type:
+'git init'
+
+C2: Adding a file to the git repository
+git add file.txt
+
+C3: Checking the status of the git repository
+'git status'
+
+C4: Commit a change with a commit message
+'git commit -m "commit message"'
+
+C5: View a log of changes to a local git repository
+'git log'
+
+C6: I can view the difference between two files in my local repository
+'git diff'
+
+C7: List the branches that exist is my local repository
+'git branch'
+
+C8: Creating a new branch in my local git repository
+'git branch newbranch'
+
+
