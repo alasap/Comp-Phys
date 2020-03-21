@@ -9,8 +9,8 @@ import seaborn as sns
 sns.set()
 
 #Opening the files and Converting the contents to an arrays
-cosmicray = open('/home/austin/docs/cp/sunproject/climax.tab')
-sunspot = open('/home/austin/docs/cp/sunproject/SSmeans.txt')
+cosmicray = open('/home/alasap/docs/cp/sunproject/climax.tab')
+sunspot = open('/home/alasap/docs/cp/sunproject/SSmeans.txt')
 
 
 CA=cosmicray.read().split()
@@ -76,4 +76,5 @@ axs2.set_ylabel('$R_z = k(10g + s)$')
 axs1.set_ylabel('Counts per Hour')
 axs1.legend(fontsize=8,loc='lower left')
 
-plt.show()
+#plt.show()
+plt.savefig('plot.png',dpi=1000)
