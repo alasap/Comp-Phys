@@ -1,0 +1,59 @@
+\documentclass{article}
+\author{\huge Austin Hall}
+\date{\huge March 2020}
+\title{\Huge Latex-Skills}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\begin{document}
+\maketitle
+\begin{center}
+{\LARGE Abstract}\\
+\end{center}
+Hello World
+
+
+\newpage
+\section{Introduction}
+This formula $a^2+b^2=c^2$ is an example of typesetting inline with text
+\begin{equation}
+a^2+b^2=c^2
+\end{equation}
+While that is an equation typsetted seperately from the text
+
+\newpage
+\section{Theory and Methods}
+\begin{figure}[h!]
+\centering{}
+\includegraphics[scale=0.5]{logo.png}
+\caption{Latex Logo}
+\label{fig:logo}
+\end{figure}
+
+
+\newpage
+\section{Results}
+\begin{equation}
+c=\sqrt[2]{a^2+b^2}\\
+\text{\\ I can add text within the equation environment}
+\end{equation}
+\\Or using the align environment
+\begin{align}
+x&=\frac{-b+\sqrt[2]{b^2-4ac}}{2a}
+\\x&=\frac{-b-\sqrt[2]{b^2-4ac}}{2a}
+\end{align}
+\\Referencing a figure using the label
+\\Clearly you can see the power of Figure \ref{fig:logo}
+\newpage
+\section{Analysis}
+
+
+\newpage
+\section{Conclusion}
+I would like to thank the authors of the book \cite{Scopatz2015} for all of the helpful imformation.
+
+\newpage
+\bibliographystyle{plain}
+\bibliography{bib.bib}
+\end{document}
