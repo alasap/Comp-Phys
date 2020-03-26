@@ -1,0 +1,42 @@
+
+D1: I created an account on Github
+
+D2: I Created a Comp-Phys repository
+
+D3: I can clone a git-hub repository
+##In the terminal after installing git
+'git clone <repository url>'
+
+C1: Pointing an existing local repository to a remote git repository
+'git remote add origin <repository url>'
+
+C2:Push Commits in a local copy to a remote copy
+#in the desired directory with git-init
+'git push origin master'
+
+C3: Fetch imformation about changes to a remote repository
+'git fetch origin master'
+
+C4: Raising an issue on GitHub
+Under the desired repository there is a tab along the top labled 'issues'
+that allows users to raise issues regarding a repository's content.
+
+B1: Forking a git-hub repository
+In the upper right hand corner of a git-hub repository there is a button 
+that allows you to fork an online repository into your own.
+
+
+B2: I can merge changes from a remote repository into a local
+'git fetch origin'
+'git merge origin/master'
+
+B3: I can fetch and merge in one step
+'git pull origin master'
+
+
+B4: Initiating a pull request on GitHub
+under the pull requests tab at the top of the desired directory there is a 
+button that allows you to initiate new pull requests.
+
+A1: I Can resolve a conflict between my local repository and a git-hub repo.
+
