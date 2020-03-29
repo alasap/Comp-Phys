@@ -13,9 +13,12 @@
 \doublespacing
 \begin{document}
 \maketitle
+\vspace{0.75cm}
 \begin{center}
 {\LARGE Abstract}\\
 \end{center}
+\large
+\input{abstract.tex}
 
 \newpage
 \section{Introduction}
@@ -29,8 +32,8 @@
 \section{Results}
 \begin{figure}[h!]
 \centering
-\caption{Plot representing the data for cosmic-rays and sunspots with
-blue aligning to the moving average and colored points reflecting
+\caption{Plot representing cosmic-rays(top) and sunspots(bottom) with
+blue as the moving average and colored points reflecting
 corresponding extrema.}
 \includegraphics[scale=0.7]{plot.png}
 \label{fig:sundata}
@@ -38,7 +41,7 @@ corresponding extrema.}
 \begin{table}[h!]
  \centering
  \small
- \caption{Table of corresponding extrema values and the time-gap between each.}
+ \caption{Table of corresponding extrema values with the time-gap between each.}
  \label{tbl:timegap}
  \begin{tabular}{| p{2cm} |p{2cm} |p{1cm}||p{2cm}|p{2cm}|p{1cm}|  }
   \hline

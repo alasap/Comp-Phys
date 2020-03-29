@@ -1,10 +1,16 @@
 \par Using the files from the NOAA repository the data files were read and 
-restructured with python to remover extraneous data. With proper structuring
+restructured with python to remove extraneous data.
+Sunspots are tabulated through the use of the Wolf number: $R_z=k(10g+s)$.
+Where $k$ is the scaling factoring varying for location and types of intrumentation.
+While $g$ represents the number of sunspot groups and $s$ represents the number
+of individual sunspots.\\
+
+\par After proper structuring
 the data was then smoothed through the use of a moving average since the 
-original data contains high fluctuations within the data set.\\
-\par The moving average data-set was utilized in two manners. 
-Visual use came through the contruction of a dual-plot representing
-the cosmicrays and sunspots over the course of $50$ years. Then it was used
+original files contain high fluctuations within the data set.
+The moving average data-set was utilized in two manners. 
+Visual use came through the contruction of a subplot representing
+cosmic-rays and sunspots over the course of a $50$ year period. Then was used
 numerically to determine the relative maximum's and minimum's within a time
 period. After determining the relative extrema the time difference between
 their occurances was tabulated and averaged. 
