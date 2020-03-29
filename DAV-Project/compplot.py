@@ -8,8 +8,8 @@ import seaborn as sns
 sns.set()
 
 #Opening the files and Converting the contents to an arrays
-cosmicray = open('/home/austin/docs/cp/sunproject/climax.tab')
-sunspot = open('/home/austin/docs/cp/sunproject/SSmeans.txt')
+cosmicray = open('/home/austin/docs/cp/DAV-Project/climax.tab')
+sunspot = open('/home/austin/docs/cp/DAV-Project/SSmeans.txt')
 
 
 CA=cosmicray.read().split()
@@ -120,7 +120,7 @@ print(ssmaxmin)
 fig, (axs1,axs2) = plt.subplots(2,1,sharex=True)
 axs1.set_title('Cosmic-Ray Count',fontsize=15)
 axs2.set_title('Sun-Spot Count',fontsize=15)
-axs1.plot(x, CAn,color='grey',alpha=0.9,linewidth=0.7,label='Given Data')
+axs1.plot(x, CAn,color='grey',alpha=0.9,linewidth=0.7,label='NOAA Data-Sets')
 axs1.plot(x,CAma,color='blue',alpha=1,linewidth=0.9,label='Moving Average')
 axs2.plot(x, SSn,color='grey',alpha=0.9,linewidth=0.7)
 axs2.plot(x, SSma,color='blue',alpha=1,linewidth=0.9)
