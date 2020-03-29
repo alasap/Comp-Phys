@@ -1,13 +1,14 @@
 \documentclass{article}
-\author{Austin Hall}
+\author{Austin Hall - University of Central Arkansas}
 \date{March 2020}
-\title{\huge Sun-Data Analysis}
+\title{\huge Data Analysis Project}
 \usepackage{natbib}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{epstopdf}
 \usepackage{setspace}
 \usepackage{indentfirst}
+\usepackage{hyperref}
 
 \doublespacing
 \begin{document}
@@ -28,15 +29,17 @@
 \section{Results}
 \begin{figure}[h!]
 \centering
-\caption{plot}
+\caption{Plot representing the data for cosmic-rays and sunspots with
+blue aligning to the moving average and colored points reflecting
+corresponding extrema.}
 \includegraphics[scale=0.7]{plot.png}
 \label{fig:sundata}
 \end{figure}
 \begin{table}[h!]
  \centering
  \small
- \caption{table}
- \label{tbl:timelag}
+ \caption{Table of corresponding extrema values and the time-gap between each.}
+ \label{tbl:timegap}
  \begin{tabular}{| p{2cm} |p{2cm} |p{1cm}||p{2cm}|p{2cm}|p{1cm}|  }
   \hline
   \multicolumn{6}{|c|}{Time-Gap Data Avg=8.4 Months} \\
@@ -53,10 +56,12 @@
 \end{table}
 \newpage
 \section{Analysis}
-
+\input{analysis.tex}
 
 \newpage
 \section{Conclusion}
+\input{conclusion.tex}
+
 \newpage
 \bibliographystyle{plain}
 \bibliography{bib.bib}
