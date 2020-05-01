@@ -1,4 +1,6 @@
 def mean(val):
-    val=1
-    return val
+    if val[0]==1:
+        return 1
+    else:
+        return 2
 
