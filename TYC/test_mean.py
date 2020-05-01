@@ -11,5 +11,9 @@ class TestCode(unittest.TestCase):
         fun = mean([2,2])
         exp = 2
         self.assertEqual(fun ,exp)
+    def test_mean2(self):
+        fun = mean([1,2])
+        exp = 1.5
+        self.assertEqual(fun, exp)
 if __name__ == '__main__':
     unittest.main()
