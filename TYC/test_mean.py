@@ -6,4 +6,7 @@ class TestCode(unittest.TestCase):
     def test_mean(self):
         fun = mean([1,1])
         exp = 1
-        self.assertEqual(obs, exp)
+        self.assertEqual(fun, exp)
+
+if __name__ == '__main__':
+    unittest.main()
