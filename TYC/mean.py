@@ -1,9 +1,9 @@
 def mean(val):
-    if val[0]==1:
-        if val[1]==2:
-            return 1.5
-        else:
-            return 1
-    else:
-        return 2
+    num=0
+    for i in range(0,len(val)):
+        num += val[i]
+    ans= num/ len(val)
+    return ans
+
+mean([0,1,2,3])
 
